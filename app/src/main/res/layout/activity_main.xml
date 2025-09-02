@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contenedorIzquierda"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <FrameLayout
+                android:id="@+id/contenedorPersonaje"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgSteve"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/steve" />
+
+                <LinearLayout
+                    android:id="@+id/cabeza"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="114dp"
+                    android:layout_width="73dp"
+                    android:layout_height="75dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgCasco"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/casco" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cuerpo"
+                    android:layout_marginTop="82dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                    android:id="@+id/imgPechera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/pechera" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/piernas"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginStart="115dp"
+                    android:layout_width="69dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgPantalon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/pantalon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pies"
+                    android:layout_marginTop="267dp"
+                    android:layout_marginStart="114dp"
+                    android:orientation="vertical"
+                    android:layout_width="72dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgBotas"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/botas" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedorDerecha"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressCasco"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/progressbar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="200dp"
+                        android:progress="0"
+                        android:max="100"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnEquipCasco"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/inventario"
+                    android:src="@drawable/casco"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressPechera"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/progressbar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="200dp"
+                        android:progress="0"
+                        android:max="100" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnEquipPechera"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/inventario"
+                    android:src="@drawable/pechera"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressPantalon"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/progressbar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="200dp"
+                        android:progress="0"
+                        android:max="100"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnEquipPantalon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/inventario"
+                    android:src="@drawable/pantalon"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressBotas"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/progressbar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="200dp"
+                        android:progress="0"
+                        android:max="100"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnEquipBotas"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/inventario"
+                    android:src="@drawable/botas"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

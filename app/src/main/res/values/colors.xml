@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FF808080</color>
+    <color name="dark_gray">#FF404040</color>
+    <color name="light_gray">#FFC0C0C0</color>
+    <color name="progress_color">#FF4CAF50</color>
+    <color name="progress_background">#FFE0E0E0</color>
+    <color name="button_primary">#FF2196F3</color>
+    <color name="button_secondary">#FF757575</color>
+    <color name="reset_button">#FFF44336</color>
+    <color name="slot_background_color">#FF424242</color>
+    <color name="diamond_color">#FF00D4FF</color>
+    <color name="inventory_panel_color">#FF2F2F2F</color>
+</resources>
